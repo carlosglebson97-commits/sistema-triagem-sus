@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Painel Médico</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Painel Médico - Fila Inteligente</h1>
+
+<a href="/" class="btn-topo">Triagem</a>
+
+</header>
+
+<div class="container">
+
+<div class="card" style="width:100%">
+
+<h2>Paciente em Atendimento</h2>
+
+{% if atendimento %}
+
+<p><strong>Nome:</strong> {{atendimento[1]}}</p>
+
+<p><strong>Prioridade:</strong>
+<span class="{{atendimento[4]}}">
+{{atendimento[4]}}
+</span>
+</p>
+
+<a href="/finalizar/{{atendimento[0]}}">
+<button>Finalizar Atendimento</button>
+</a>
+
+<!-- SCRIPT VOZ AUTOMÁTICA -->
+<script>
+
+function tocarSomHospital(){
+    var audio = new Audio("/static/ding.mp3");
+    audio.play();
+}
+
+function falarPaciente(nome, prioridade){
+
+    const texto =
+    "Paciente " + nome +
+    ", favor dirigir-se ao consultório. Prioridade " +
+    prioridade;
+
+    const fala = new SpeechSynthesisUtterance(texto);
+
+    fala.lang = "pt-BR";
+    fala.rate = 0.9;
+    fala.pitch = 1;
+
+    speechSynthesis.speak(fala);
+}
+
+// executa automaticamente
+window.onload = function(){
+
+    tocarSomHospital();
+
+    setTimeout(function(){
+
+        falarPaciente(
+            "{{atendimento[1]}}",
+            "{{atendimento[4]}}"
+        );
+
+    },1000);
+
+}
+
+</script>
+
+{% else %}
+
+<p>Nenhum paciente em atendimento</p>
+
+<a href="/chamar">
+<button>Chamar Próximo Paciente</button>
+</a>
+
+{% endif %}
+
+</div>
+
+<div class="card" style="width:100%">
+
+<h2>Fila de Espera</h2>
+
+<table>
+
+<tr>
+<th>Nome</th>
+<th>Prioridade</th>
+<th>Tempo</th>
+</tr>
+
+{% for p in fila %}
+
+<tr>
+
+<td>{{p[1]}}</td>
+
+<td class="{{p[4]}}">{{p[4]}}</td>
+
+<td>{{p[5]}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Triagem_IA SUS</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Sistema de Triagem Inteligente - SUS</h1>
+
+<a href="/painel" class="btn-topo">Painel Médico</a>
+
+</header>
+
+<div class="container">
+
+<div class="left">
+
+<div class="card">
+
+<h2>Cadastro de Paciente</h2>
+
+<form method="POST">
+
+<input name="nome" placeholder="Nome" required>
+
+<input name="idade" placeholder="Idade" required>
+
+<input name="sintomas" placeholder="Sintomas: febre, tosse..." required>
+
+<button type="submit">Analise IA</button>
+
+</form>
+
+</div>
+
+{% if resultado %}
+
+<div class="card">
+
+<h3>Resultado da Triagem</h3>
+
+<p><strong>Diagnóstico:</strong> {{resultado.diagnostico}}</p>
+
+<p><strong>Tempo estimado:</strong> {{resultado.tempo}} min</p>
+
+<p class="{{resultado.cor}}">
+
+<strong>Prioridade:</strong> {{resultado.cor}}
+
+</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</div>
+
+</body>
+
+</html>
