@@ -1,190 +1,119 @@
 body{
-
-font-family:Arial;
-
-/* IMAGEM DE FUNDO DO HOSPITAL */
-background-image:
-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-url("hospital.PNG.webp");
-
-background-size:cover;
-
-background-position:center;
-
-background-repeat:no-repeat;
-
-background-attachment:fixed;
-
-margin:0;
-
+    font-family: Arial;
+    /* IMAGEM DE FUNDO DO HOSPITAL */
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("hospital.PNG.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0;
 }
 
 header{
-
-background:linear-gradient(to right,#0b3d91,#1e5799);
-
-color:white;
-
-padding:15px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-box-shadow:0px 3px 8px rgba(0,0,0,0.3);
-
+    background: linear-gradient(to right,#0b3d91,#1e5799);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
 }
 
 .btn-topo{
-
-background:white;
-
-color:#0b3d91;
-
-padding:8px 15px;
-
-text-decoration:none;
-
-border-radius:5px;
-
-font-weight:bold;
-
+    background: white;
+    color: #0b3d91;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .container{
-
-display:flex;
-
-gap:20px;
-
-padding:20px;
-
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* evita quebrar em telas menores */
 }
 
 .card{
-
-background:white;
-
-padding:20px;
-
-border-radius:8px;
-
-box-shadow:0px 3px 10px rgba(0,0,0,0.2);
-
-margin-bottom:20px;
-
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
 }
 
 .left{
-
-width:40%;
-
+    width:40%;
+    min-width:300px;
 }
 
 .right{
-
-width:60%;
-
+    width:60%;
+    min-width:300px;
 }
 
 input{
-
-width:100%;
-
-padding:10px;
-
-margin-bottom:10px;
-
-border:1px solid #ccc;
-
-border-radius:5px;
-
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
 }
 
 button{
+    background:linear-gradient(to bottom,#2ecc71,#27ae60);
+    color:white;
+    padding:10px;
+    border:none;
+    width:100%;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
 
-background:linear-gradient(to bottom,#2ecc71,#27ae60);
-
-color:white;
-
-padding:10px;
-
-border:none;
-
-width:100%;
-
-border-radius:5px;
-
-font-size:16px;
-
-cursor:pointer;
-
+button:hover{
+    opacity:0.9;
 }
 
 table{
-
-width:100%;
-
-border-collapse:collapse;
-
+    width:100%;
+    border-collapse:collapse;
+    background:white;
 }
 
 th{
-
-background:#0b3d91;
-
-color:white;
-
-padding:10px;
-
+    background:#0b3d91;
+    color:white;
+    padding:10px;
 }
 
 td{
-
-padding:10px;
-
-text-align:center;
-
-border-bottom:1px solid #ddd;
-
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
 }
 
 .VERMELHO{
-
-background:#e74c3c;
-
-color:white;
-
-font-weight:bold;
-
+    background:#e74c3c;
+    color:white;
+    font-weight:bold;
 }
 
 .AMARELO{
-
-background:#f1c40f;
-
-font-weight:bold;
-
+    background:#f1c40f;
+    font-weight:bold;
 }
 
 .VERDE{
-
-background:#2ecc71;
-
-color:white;
-
-font-weight:bold;
-
+    background:#2ecc71;
+    color:white;
+    font-weight:bold;
 }
 
 .btn-excluir{
-
-background:#e74c3c;
-
-width:auto;
-
-padding:5px 10px;
-
+    background:#e74c3c;
+    width:auto;
+    padding:5px 10px;
+    border-radius:4px;
 }
