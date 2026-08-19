@@ -1,6 +1,6 @@
 # sistema-triagem-sus
 Sistema de Triagem Inteligente para o SUS utilizando Python, Flask e Machine Learning (Decision Tree) para classificação automática de prioridade e estimativa de tempo de atendimento.
-## 📸 Demonstração do Sistema
+##  Demonstração do Sistema
 
 ### Tela de Triagem
 ![Tela de Triagem](static/triagem.png)
@@ -8,7 +8,7 @@ Sistema de Triagem Inteligente para o SUS utilizando Python, Flask e Machine Lea
 ### Painel Médico
 ![Painel Médico](static/painel.png)git add .
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Linguagem:** Python 3
 - **Framework Web:** Flask
@@ -18,7 +18,7 @@ Sistema de Triagem Inteligente para o SUS utilizando Python, Flask e Machine Lea
 
 ---
 
-## 🛠️ Funcionalidades
+##  Funcionalidades
 
 - **Cadastro e Triagem:** Coleta de dados do paciente e sintomas.
 - **Classificação por IA:** Classificação automática de prioridade por cores (**VERMELHO**, **AMARELO**, **VERDE**) e estimativa de tempo.
@@ -26,5 +26,5 @@ Sistema de Triagem Inteligente para o SUS utilizando Python, Flask e Machine Lea
 
 ---
 
-👨‍💻 **Desenvolvido por Glebson Carlos da Silva**
+**Desenvolvido por Glebson Carlos da Silva**
 
