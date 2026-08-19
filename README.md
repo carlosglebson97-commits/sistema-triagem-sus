@@ -1,5 +1,6 @@
 # sistema-triagem-sus
 Sistema de Triagem Inteligente para o SUS utilizando Python, Flask e Machine Learning (Decision Tree) para classificação automática de prioridade e estimativa de tempo de atendimento.
+**Link direto da aplicação ao vivo:** (https://sistema-triagem-sus.onrender.com)
 ##  Demonstração do Sistema
 
 ### Tela de Triagem
